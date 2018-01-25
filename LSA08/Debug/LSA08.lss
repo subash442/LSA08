@@ -1,0 +1,644 @@
+
+LSA08.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000000e  00800200  000003d0  00000464  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000003d0  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000004  0080020e  0080020e  00000472  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000472  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000004a4  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 000001a0  00000000  00000000  000004e4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00001ff3  00000000  00000000  00000684  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000fc0  00000000  00000000  00002677  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000940  00000000  00000000  00003637  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000408  00000000  00000000  00003f78  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000d0e  00000000  00000000  00004380  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000a30  00000000  00000000  0000508e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000170  00000000  00000000  00005abe  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	71 c0       	rjmp	.+226    	; 0xe4 <__ctors_end>
+   2:	00 00       	nop
+   4:	8e c0       	rjmp	.+284    	; 0x122 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	8c c0       	rjmp	.+280    	; 0x122 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	8a c0       	rjmp	.+276    	; 0x122 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	88 c0       	rjmp	.+272    	; 0x122 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	86 c0       	rjmp	.+268    	; 0x122 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	84 c0       	rjmp	.+264    	; 0x122 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	82 c0       	rjmp	.+260    	; 0x122 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	80 c0       	rjmp	.+256    	; 0x122 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	7e c0       	rjmp	.+252    	; 0x122 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	7c c0       	rjmp	.+248    	; 0x122 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	7a c0       	rjmp	.+244    	; 0x122 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	78 c0       	rjmp	.+240    	; 0x122 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	76 c0       	rjmp	.+236    	; 0x122 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	74 c0       	rjmp	.+232    	; 0x122 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	72 c0       	rjmp	.+228    	; 0x122 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	70 c0       	rjmp	.+224    	; 0x122 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	6e c0       	rjmp	.+220    	; 0x122 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	6c c0       	rjmp	.+216    	; 0x122 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	6a c0       	rjmp	.+212    	; 0x122 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	68 c0       	rjmp	.+208    	; 0x122 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	66 c0       	rjmp	.+204    	; 0x122 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	64 c0       	rjmp	.+200    	; 0x122 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	62 c0       	rjmp	.+196    	; 0x122 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	60 c0       	rjmp	.+192    	; 0x122 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	40 c1       	rjmp	.+640    	; 0x2e6 <__vector_25>
+  66:	00 00       	nop
+  68:	5c c0       	rjmp	.+184    	; 0x122 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	5a c0       	rjmp	.+180    	; 0x122 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	58 c0       	rjmp	.+176    	; 0x122 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	56 c0       	rjmp	.+172    	; 0x122 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	54 c0       	rjmp	.+168    	; 0x122 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	52 c0       	rjmp	.+164    	; 0x122 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	50 c0       	rjmp	.+160    	; 0x122 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	4e c0       	rjmp	.+156    	; 0x122 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	4c c0       	rjmp	.+152    	; 0x122 <__bad_interrupt>
+  8a:	00 00       	nop
+  8c:	4a c0       	rjmp	.+148    	; 0x122 <__bad_interrupt>
+  8e:	00 00       	nop
+  90:	3a c1       	rjmp	.+628    	; 0x306 <__vector_36>
+  92:	00 00       	nop
+  94:	46 c0       	rjmp	.+140    	; 0x122 <__bad_interrupt>
+  96:	00 00       	nop
+  98:	44 c0       	rjmp	.+136    	; 0x122 <__bad_interrupt>
+  9a:	00 00       	nop
+  9c:	42 c0       	rjmp	.+132    	; 0x122 <__bad_interrupt>
+  9e:	00 00       	nop
+  a0:	40 c0       	rjmp	.+128    	; 0x122 <__bad_interrupt>
+  a2:	00 00       	nop
+  a4:	3e c0       	rjmp	.+124    	; 0x122 <__bad_interrupt>
+  a6:	00 00       	nop
+  a8:	3c c0       	rjmp	.+120    	; 0x122 <__bad_interrupt>
+  aa:	00 00       	nop
+  ac:	3a c0       	rjmp	.+116    	; 0x122 <__bad_interrupt>
+  ae:	00 00       	nop
+  b0:	38 c0       	rjmp	.+112    	; 0x122 <__bad_interrupt>
+  b2:	00 00       	nop
+  b4:	36 c0       	rjmp	.+108    	; 0x122 <__bad_interrupt>
+  b6:	00 00       	nop
+  b8:	34 c0       	rjmp	.+104    	; 0x122 <__bad_interrupt>
+  ba:	00 00       	nop
+  bc:	32 c0       	rjmp	.+100    	; 0x122 <__bad_interrupt>
+  be:	00 00       	nop
+  c0:	30 c0       	rjmp	.+96     	; 0x122 <__bad_interrupt>
+  c2:	00 00       	nop
+  c4:	2e c0       	rjmp	.+92     	; 0x122 <__bad_interrupt>
+  c6:	00 00       	nop
+  c8:	2c c0       	rjmp	.+88     	; 0x122 <__bad_interrupt>
+  ca:	00 00       	nop
+  cc:	2c c1       	rjmp	.+600    	; 0x326 <__vector_51>
+  ce:	00 00       	nop
+  d0:	28 c0       	rjmp	.+80     	; 0x122 <__bad_interrupt>
+  d2:	00 00       	nop
+  d4:	26 c0       	rjmp	.+76     	; 0x122 <__bad_interrupt>
+  d6:	00 00       	nop
+  d8:	36 c1       	rjmp	.+620    	; 0x346 <__vector_54>
+  da:	00 00       	nop
+  dc:	22 c0       	rjmp	.+68     	; 0x122 <__bad_interrupt>
+  de:	00 00       	nop
+  e0:	20 c0       	rjmp	.+64     	; 0x122 <__bad_interrupt>
+	...
+
+000000e4 <__ctors_end>:
+  e4:	11 24       	eor	r1, r1
+  e6:	1f be       	out	0x3f, r1	; 63
+  e8:	cf ef       	ldi	r28, 0xFF	; 255
+  ea:	d1 e2       	ldi	r29, 0x21	; 33
+  ec:	de bf       	out	0x3e, r29	; 62
+  ee:	cd bf       	out	0x3d, r28	; 61
+  f0:	00 e0       	ldi	r16, 0x00	; 0
+  f2:	0c bf       	out	0x3c, r16	; 60
+
+000000f4 <__do_copy_data>:
+  f4:	12 e0       	ldi	r17, 0x02	; 2
+  f6:	a0 e0       	ldi	r26, 0x00	; 0
+  f8:	b2 e0       	ldi	r27, 0x02	; 2
+  fa:	e0 ed       	ldi	r30, 0xD0	; 208
+  fc:	f3 e0       	ldi	r31, 0x03	; 3
+  fe:	00 e0       	ldi	r16, 0x00	; 0
+ 100:	0b bf       	out	0x3b, r16	; 59
+ 102:	02 c0       	rjmp	.+4      	; 0x108 <__do_copy_data+0x14>
+ 104:	07 90       	elpm	r0, Z+
+ 106:	0d 92       	st	X+, r0
+ 108:	ae 30       	cpi	r26, 0x0E	; 14
+ 10a:	b1 07       	cpc	r27, r17
+ 10c:	d9 f7       	brne	.-10     	; 0x104 <__do_copy_data+0x10>
+
+0000010e <__do_clear_bss>:
+ 10e:	22 e0       	ldi	r18, 0x02	; 2
+ 110:	ae e0       	ldi	r26, 0x0E	; 14
+ 112:	b2 e0       	ldi	r27, 0x02	; 2
+ 114:	01 c0       	rjmp	.+2      	; 0x118 <.do_clear_bss_start>
+
+00000116 <.do_clear_bss_loop>:
+ 116:	1d 92       	st	X+, r1
+
+00000118 <.do_clear_bss_start>:
+ 118:	a2 31       	cpi	r26, 0x12	; 18
+ 11a:	b2 07       	cpc	r27, r18
+ 11c:	e1 f7       	brne	.-8      	; 0x116 <.do_clear_bss_loop>
+ 11e:	59 d0       	rcall	.+178    	; 0x1d2 <main>
+ 120:	55 c1       	rjmp	.+682    	; 0x3cc <_exit>
+
+00000122 <__bad_interrupt>:
+ 122:	6e cf       	rjmp	.-292    	; 0x0 <__vectors>
+
+00000124 <_ZN11LinetrackerC1Ei>:
+	send_data(UARTDATAOUTMODE_CHAR,0X02);		//sensor data from 0X00 left to 0X70 right;
+}
+
+void Linetracker::clear_junction()	//clear junction count of LSA08
+{
+	send_data(JUNCTIONINFO_CHAR,0X00);
+ 124:	fc 01       	movw	r30, r24
+ 126:	60 83       	st	Z, r22
+ 128:	16 82       	std	Z+6, r1	; 0x06
+ 12a:	13 82       	std	Z+3, r1	; 0x03
+ 12c:	12 82       	std	Z+2, r1	; 0x02
+ 12e:	08 95       	ret
+
+00000130 <_ZN11Linetracker10initialiseEv>:
+ 130:	78 94       	sei
+ 132:	82 d0       	rcall	.+260    	; 0x238 <_Z9initUART2v>
+ 134:	a4 e0       	ldi	r26, 0x04	; 4
+ 136:	b1 e0       	ldi	r27, 0x01	; 1
+ 138:	8c 91       	ld	r24, X
+ 13a:	8e 7f       	andi	r24, 0xFE	; 254
+ 13c:	8c 93       	st	X, r24
+ 13e:	e5 e0       	ldi	r30, 0x05	; 5
+ 140:	f1 e0       	ldi	r31, 0x01	; 1
+ 142:	80 81       	ld	r24, Z
+ 144:	8e 7f       	andi	r24, 0xFE	; 254
+ 146:	80 83       	st	Z, r24
+ 148:	8c 91       	ld	r24, X
+ 14a:	82 60       	ori	r24, 0x02	; 2
+ 14c:	8c 93       	st	X, r24
+ 14e:	80 81       	ld	r24, Z
+ 150:	8d 7f       	andi	r24, 0xFD	; 253
+ 152:	80 83       	st	Z, r24
+ 154:	08 95       	ret
+
+00000156 <_ZN11Linetracker9send_dataEcc>:
+ 156:	0f 93       	push	r16
+ 158:	1f 93       	push	r17
+ 15a:	cf 93       	push	r28
+ 15c:	df 93       	push	r29
+ 15e:	ec 01       	movw	r28, r24
+ 160:	06 2f       	mov	r16, r22
+ 162:	14 2f       	mov	r17, r20
+ 164:	88 81       	ld	r24, Y
+ 166:	98 2f       	mov	r25, r24
+ 168:	94 0f       	add	r25, r20
+ 16a:	96 0f       	add	r25, r22
+ 16c:	99 83       	std	Y+1, r25	; 0x01
+ 16e:	78 d0       	rcall	.+240    	; 0x260 <_Z13UART2Transmith>
+ 170:	80 2f       	mov	r24, r16
+ 172:	76 d0       	rcall	.+236    	; 0x260 <_Z13UART2Transmith>
+ 174:	81 2f       	mov	r24, r17
+ 176:	74 d0       	rcall	.+232    	; 0x260 <_Z13UART2Transmith>
+ 178:	89 81       	ldd	r24, Y+1	; 0x01
+ 17a:	72 d0       	rcall	.+228    	; 0x260 <_Z13UART2Transmith>
+ 17c:	df 91       	pop	r29
+ 17e:	cf 91       	pop	r28
+ 180:	1f 91       	pop	r17
+ 182:	0f 91       	pop	r16
+ 184:	08 95       	ret
+
+00000186 <_ZN11Linetracker9CalibrateEv>:
+ 186:	40 e0       	ldi	r20, 0x00	; 0
+ 188:	63 e4       	ldi	r22, 0x43	; 67
+ 18a:	e5 cf       	rjmp	.-54     	; 0x156 <_ZN11Linetracker9send_dataEcc>
+ 18c:	08 95       	ret
+
+0000018e <_ZN11Linetracker17Get_Junc_pincountEv>:
+}
+
+/*****************************************************************************************************************************/
+
+int Linetracker::Get_Junc_pincount()		//count from avr using junction pulse  //using polling
+{
+ 18e:	fc 01       	movw	r30, r24
+	if(junction_detect && !(READ(JUNCTION_PIN)))
+ 190:	86 81       	ldd	r24, Z+6	; 0x06
+ 192:	88 23       	and	r24, r24
+ 194:	21 f0       	breq	.+8      	; 0x19e <_ZN11Linetracker17Get_Junc_pincountEv+0x10>
+ 196:	80 91 03 01 	lds	r24, 0x0103	; 0x800103 <__TEXT_REGION_LENGTH__+0x700103>
+ 19a:	80 ff       	sbrs	r24, 0
+ 19c:	09 c0       	rjmp	.+18     	; 0x1b0 <_ZN11Linetracker17Get_Junc_pincountEv+0x22>
+	{
+		junction_count++;
+		junction_detect = false;
+	}
+	if(READ(JUNCTION_PIN))
+ 19e:	80 91 03 01 	lds	r24, 0x0103	; 0x800103 <__TEXT_REGION_LENGTH__+0x700103>
+ 1a2:	80 ff       	sbrs	r24, 0
+ 1a4:	02 c0       	rjmp	.+4      	; 0x1aa <_ZN11Linetracker17Get_Junc_pincountEv+0x1c>
+	{
+		junction_detect = true;
+ 1a6:	81 e0       	ldi	r24, 0x01	; 1
+ 1a8:	86 83       	std	Z+6, r24	; 0x06
+	}
+	return junction_count;	
+ 1aa:	82 81       	ldd	r24, Z+2	; 0x02
+ 1ac:	93 81       	ldd	r25, Z+3	; 0x03
+ 1ae:	08 95       	ret
+
+int Linetracker::Get_Junc_pincount()		//count from avr using junction pulse  //using polling
+{
+	if(junction_detect && !(READ(JUNCTION_PIN)))
+	{
+		junction_count++;
+ 1b0:	82 81       	ldd	r24, Z+2	; 0x02
+ 1b2:	93 81       	ldd	r25, Z+3	; 0x03
+ 1b4:	01 96       	adiw	r24, 0x01	; 1
+ 1b6:	93 83       	std	Z+3, r25	; 0x03
+ 1b8:	82 83       	std	Z+2, r24	; 0x02
+		junction_detect = false;
+ 1ba:	16 82       	std	Z+6, r1	; 0x06
+ 1bc:	f0 cf       	rjmp	.-32     	; 0x19e <_ZN11Linetracker17Get_Junc_pincountEv+0x10>
+
+000001be <_ZN11Linetracker16Get_Sensors_DataEv>:
+	}
+	return junction_count;	
+}
+
+int Linetracker::Get_Sensors_Data()
+{
+ 1be:	cf 93       	push	r28
+ 1c0:	df 93       	push	r29
+ 1c2:	ec 01       	movw	r28, r24
+	rcvdat = UART2Receive();
+ 1c4:	55 d0       	rcall	.+170    	; 0x270 <_Z12UART2Receivev>
+ 1c6:	90 e0       	ldi	r25, 0x00	; 0
+ 1c8:	9d 83       	std	Y+5, r25	; 0x05
+ 1ca:	8c 83       	std	Y+4, r24	; 0x04
+	return rcvdat;
+}
+ 1cc:	df 91       	pop	r29
+ 1ce:	cf 91       	pop	r28
+ 1d0:	08 95       	ret
+
+000001d2 <main>:
+
+#include <avr/io.h>
+#include "Linetracker.h"
+
+int main(void)
+{
+ 1d2:	cf 93       	push	r28
+ 1d4:	df 93       	push	r29
+ 1d6:	cd b7       	in	r28, 0x3d	; 61
+ 1d8:	de b7       	in	r29, 0x3e	; 62
+ 1da:	27 97       	sbiw	r28, 0x07	; 7
+ 1dc:	0f b6       	in	r0, 0x3f	; 63
+ 1de:	f8 94       	cli
+ 1e0:	de bf       	out	0x3e, r29	; 62
+ 1e2:	0f be       	out	0x3f, r0	; 63
+ 1e4:	cd bf       	out	0x3d, r28	; 61
+	initUART0();
+ 1e6:	1c d0       	rcall	.+56     	; 0x220 <_Z9initUART0v>
+  Linetracker L1(0);	
+ 1e8:	60 e0       	ldi	r22, 0x00	; 0
+ 1ea:	70 e0       	ldi	r23, 0x00	; 0
+ 1ec:	ce 01       	movw	r24, r28
+ 1ee:	01 96       	adiw	r24, 0x01	; 1
+ 1f0:	99 df       	rcall	.-206    	; 0x124 <_ZN11LinetrackerC1Ei>
+  L1.initialise();
+ 1f2:	ce 01       	movw	r24, r28
+ 1f4:	01 96       	adiw	r24, 0x01	; 1
+ 1f6:	9c df       	rcall	.-200    	; 0x130 <_ZN11Linetracker10initialiseEv>
+  L1.Calibrate();
+ 1f8:	ce 01       	movw	r24, r28
+ 1fa:	01 96       	adiw	r24, 0x01	; 1
+ 1fc:	c4 df       	rcall	.-120    	; 0x186 <_ZN11Linetracker9CalibrateEv>
+
+    while (1) 
+    {
+		UART0TransmitString("Data\t");
+ 1fe:	80 e0       	ldi	r24, 0x00	; 0
+ 200:	92 e0       	ldi	r25, 0x02	; 2
+		UART0TransmitData(L1.Get_Sensors_Data());
+ 202:	63 d0       	rcall	.+198    	; 0x2ca <_Z19UART0TransmitStringPKc>
+ 204:	ce 01       	movw	r24, r28
+ 206:	01 96       	adiw	r24, 0x01	; 1
+ 208:	da df       	rcall	.-76     	; 0x1be <_ZN11Linetracker16Get_Sensors_DataEv>
+		UART0TransmitString("\tCount\t");
+ 20a:	37 d0       	rcall	.+110    	; 0x27a <_Z17UART0TransmitDatai>
+ 20c:	86 e0       	ldi	r24, 0x06	; 6
+ 20e:	92 e0       	ldi	r25, 0x02	; 2
+		UART0TransmitData(L1.Get_Junc_pincount());
+ 210:	5c d0       	rcall	.+184    	; 0x2ca <_Z19UART0TransmitStringPKc>
+ 212:	ce 01       	movw	r24, r28
+ 214:	01 96       	adiw	r24, 0x01	; 1
+ 216:	bb df       	rcall	.-138    	; 0x18e <_ZN11Linetracker17Get_Junc_pincountEv>
+ 218:	30 d0       	rcall	.+96     	; 0x27a <_Z17UART0TransmitDatai>
+ 21a:	8a e0       	ldi	r24, 0x0A	; 10
+		UART0Transmit('\n');
+ 21c:	19 d0       	rcall	.+50     	; 0x250 <_Z13UART0Transmith>
+ 21e:	ef cf       	rjmp	.-34     	; 0x1fe <main+0x2c>
+
+00000220 <_Z9initUART0v>:
+ 220:	10 92 c5 00 	sts	0x00C5, r1	; 0x8000c5 <__TEXT_REGION_LENGTH__+0x7000c5>
+
+void UART3TransmitString(const char *s)
+{
+	while(*s)
+	UART3Transmit(*s++);
+}
+ 224:	87 e6       	ldi	r24, 0x67	; 103
+ 226:	80 93 c4 00 	sts	0x00C4, r24	; 0x8000c4 <__TEXT_REGION_LENGTH__+0x7000c4>
+ 22a:	88 e9       	ldi	r24, 0x98	; 152
+ 22c:	80 93 c1 00 	sts	0x00C1, r24	; 0x8000c1 <__TEXT_REGION_LENGTH__+0x7000c1>
+ 230:	86 e0       	ldi	r24, 0x06	; 6
+ 232:	80 93 c2 00 	sts	0x00C2, r24	; 0x8000c2 <__TEXT_REGION_LENGTH__+0x7000c2>
+ 236:	08 95       	ret
+
+00000238 <_Z9initUART2v>:
+ 238:	10 92 d5 00 	sts	0x00D5, r1	; 0x8000d5 <__TEXT_REGION_LENGTH__+0x7000d5>
+ 23c:	89 e1       	ldi	r24, 0x19	; 25
+ 23e:	80 93 d4 00 	sts	0x00D4, r24	; 0x8000d4 <__TEXT_REGION_LENGTH__+0x7000d4>
+ 242:	88 e9       	ldi	r24, 0x98	; 152
+ 244:	80 93 d1 00 	sts	0x00D1, r24	; 0x8000d1 <__TEXT_REGION_LENGTH__+0x7000d1>
+ 248:	86 e0       	ldi	r24, 0x06	; 6
+ 24a:	80 93 d2 00 	sts	0x00D2, r24	; 0x8000d2 <__TEXT_REGION_LENGTH__+0x7000d2>
+ 24e:	08 95       	ret
+
+00000250 <_Z13UART0Transmith>:
+ 250:	e0 ec       	ldi	r30, 0xC0	; 192
+ 252:	f0 e0       	ldi	r31, 0x00	; 0
+ 254:	90 81       	ld	r25, Z
+ 256:	95 ff       	sbrs	r25, 5
+ 258:	fd cf       	rjmp	.-6      	; 0x254 <_Z13UART0Transmith+0x4>
+ 25a:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7000c6>
+ 25e:	08 95       	ret
+
+00000260 <_Z13UART2Transmith>:
+ 260:	e0 ed       	ldi	r30, 0xD0	; 208
+ 262:	f0 e0       	ldi	r31, 0x00	; 0
+ 264:	90 81       	ld	r25, Z
+ 266:	95 ff       	sbrs	r25, 5
+ 268:	fd cf       	rjmp	.-6      	; 0x264 <_Z13UART2Transmith+0x4>
+ 26a:	80 93 d6 00 	sts	0x00D6, r24	; 0x8000d6 <__TEXT_REGION_LENGTH__+0x7000d6>
+ 26e:	08 95       	ret
+
+00000270 <_Z12UART2Receivev>:
+ 270:	80 91 0f 02 	lds	r24, 0x020F	; 0x80020f <buffer2>
+ 274:	10 92 0f 02 	sts	0x020F, r1	; 0x80020f <buffer2>
+ 278:	08 95       	ret
+
+0000027a <_Z17UART0TransmitDatai>:
+ 27a:	0f 93       	push	r16
+ 27c:	1f 93       	push	r17
+ 27e:	cf 93       	push	r28
+ 280:	df 93       	push	r29
+ 282:	cd b7       	in	r28, 0x3d	; 61
+ 284:	de b7       	in	r29, 0x3e	; 62
+ 286:	64 97       	sbiw	r28, 0x14	; 20
+ 288:	0f b6       	in	r0, 0x3f	; 63
+ 28a:	f8 94       	cli
+ 28c:	de bf       	out	0x3e, r29	; 62
+ 28e:	0f be       	out	0x3f, r0	; 63
+ 290:	cd bf       	out	0x3d, r28	; 61
+ 292:	4a e0       	ldi	r20, 0x0A	; 10
+ 294:	be 01       	movw	r22, r28
+ 296:	6f 5f       	subi	r22, 0xFF	; 255
+ 298:	7f 4f       	sbci	r23, 0xFF	; 255
+ 29a:	65 d0       	rcall	.+202    	; 0x366 <__itoa_ncheck>
+ 29c:	89 81       	ldd	r24, Y+1	; 0x01
+ 29e:	88 23       	and	r24, r24
+ 2a0:	49 f0       	breq	.+18     	; 0x2b4 <_Z17UART0TransmitDatai+0x3a>
+ 2a2:	8e 01       	movw	r16, r28
+ 2a4:	0e 5f       	subi	r16, 0xFE	; 254
+ 2a6:	1f 4f       	sbci	r17, 0xFF	; 255
+ 2a8:	d3 df       	rcall	.-90     	; 0x250 <_Z13UART0Transmith>
+ 2aa:	f8 01       	movw	r30, r16
+ 2ac:	81 91       	ld	r24, Z+
+ 2ae:	8f 01       	movw	r16, r30
+ 2b0:	81 11       	cpse	r24, r1
+ 2b2:	fa cf       	rjmp	.-12     	; 0x2a8 <_Z17UART0TransmitDatai+0x2e>
+ 2b4:	64 96       	adiw	r28, 0x14	; 20
+ 2b6:	0f b6       	in	r0, 0x3f	; 63
+ 2b8:	f8 94       	cli
+ 2ba:	de bf       	out	0x3e, r29	; 62
+ 2bc:	0f be       	out	0x3f, r0	; 63
+ 2be:	cd bf       	out	0x3d, r28	; 61
+ 2c0:	df 91       	pop	r29
+ 2c2:	cf 91       	pop	r28
+ 2c4:	1f 91       	pop	r17
+ 2c6:	0f 91       	pop	r16
+ 2c8:	08 95       	ret
+
+000002ca <_Z19UART0TransmitStringPKc>:
+ 2ca:	cf 93       	push	r28
+ 2cc:	df 93       	push	r29
+ 2ce:	ec 01       	movw	r28, r24
+ 2d0:	88 81       	ld	r24, Y
+ 2d2:	88 23       	and	r24, r24
+ 2d4:	29 f0       	breq	.+10     	; 0x2e0 <_Z19UART0TransmitStringPKc+0x16>
+ 2d6:	21 96       	adiw	r28, 0x01	; 1
+ 2d8:	bb df       	rcall	.-138    	; 0x250 <_Z13UART0Transmith>
+ 2da:	89 91       	ld	r24, Y+
+ 2dc:	81 11       	cpse	r24, r1
+ 2de:	fc cf       	rjmp	.-8      	; 0x2d8 <_Z19UART0TransmitStringPKc+0xe>
+ 2e0:	df 91       	pop	r29
+ 2e2:	cf 91       	pop	r28
+ 2e4:	08 95       	ret
+
+000002e6 <__vector_25>:
+
+ISR(USART0_RX_vect)
+{
+ 2e6:	1f 92       	push	r1
+ 2e8:	0f 92       	push	r0
+ 2ea:	0f b6       	in	r0, 0x3f	; 63
+ 2ec:	0f 92       	push	r0
+ 2ee:	11 24       	eor	r1, r1
+ 2f0:	8f 93       	push	r24
+	buffer=UDR0;
+ 2f2:	80 91 c6 00 	lds	r24, 0x00C6	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7000c6>
+ 2f6:	80 93 11 02 	sts	0x0211, r24	; 0x800211 <buffer>
+}
+ 2fa:	8f 91       	pop	r24
+ 2fc:	0f 90       	pop	r0
+ 2fe:	0f be       	out	0x3f, r0	; 63
+ 300:	0f 90       	pop	r0
+ 302:	1f 90       	pop	r1
+ 304:	18 95       	reti
+
+00000306 <__vector_36>:
+
+ISR(USART1_RX_vect)
+{
+ 306:	1f 92       	push	r1
+ 308:	0f 92       	push	r0
+ 30a:	0f b6       	in	r0, 0x3f	; 63
+ 30c:	0f 92       	push	r0
+ 30e:	11 24       	eor	r1, r1
+ 310:	8f 93       	push	r24
+	buffer1=UDR1;
+ 312:	80 91 ce 00 	lds	r24, 0x00CE	; 0x8000ce <__TEXT_REGION_LENGTH__+0x7000ce>
+ 316:	80 93 10 02 	sts	0x0210, r24	; 0x800210 <buffer1>
+	
+}
+ 31a:	8f 91       	pop	r24
+ 31c:	0f 90       	pop	r0
+ 31e:	0f be       	out	0x3f, r0	; 63
+ 320:	0f 90       	pop	r0
+ 322:	1f 90       	pop	r1
+ 324:	18 95       	reti
+
+00000326 <__vector_51>:
+
+ISR(USART2_RX_vect)
+{
+ 326:	1f 92       	push	r1
+ 328:	0f 92       	push	r0
+ 32a:	0f b6       	in	r0, 0x3f	; 63
+ 32c:	0f 92       	push	r0
+ 32e:	11 24       	eor	r1, r1
+ 330:	8f 93       	push	r24
+	buffer2=UDR2;
+ 332:	80 91 d6 00 	lds	r24, 0x00D6	; 0x8000d6 <__TEXT_REGION_LENGTH__+0x7000d6>
+ 336:	80 93 0f 02 	sts	0x020F, r24	; 0x80020f <buffer2>
+		
+}
+ 33a:	8f 91       	pop	r24
+ 33c:	0f 90       	pop	r0
+ 33e:	0f be       	out	0x3f, r0	; 63
+ 340:	0f 90       	pop	r0
+ 342:	1f 90       	pop	r1
+ 344:	18 95       	reti
+
+00000346 <__vector_54>:
+ISR(USART3_RX_vect)
+{
+ 346:	1f 92       	push	r1
+ 348:	0f 92       	push	r0
+ 34a:	0f b6       	in	r0, 0x3f	; 63
+ 34c:	0f 92       	push	r0
+ 34e:	11 24       	eor	r1, r1
+ 350:	8f 93       	push	r24
+	buffer3=UDR3;
+ 352:	80 91 36 01 	lds	r24, 0x0136	; 0x800136 <__TEXT_REGION_LENGTH__+0x700136>
+ 356:	80 93 0e 02 	sts	0x020E, r24	; 0x80020e <__data_end>
+}
+ 35a:	8f 91       	pop	r24
+ 35c:	0f 90       	pop	r0
+ 35e:	0f be       	out	0x3f, r0	; 63
+ 360:	0f 90       	pop	r0
+ 362:	1f 90       	pop	r1
+ 364:	18 95       	reti
+
+00000366 <__itoa_ncheck>:
+ 366:	bb 27       	eor	r27, r27
+ 368:	4a 30       	cpi	r20, 0x0A	; 10
+ 36a:	31 f4       	brne	.+12     	; 0x378 <__itoa_ncheck+0x12>
+ 36c:	99 23       	and	r25, r25
+ 36e:	22 f4       	brpl	.+8      	; 0x378 <__itoa_ncheck+0x12>
+ 370:	bd e2       	ldi	r27, 0x2D	; 45
+ 372:	90 95       	com	r25
+ 374:	81 95       	neg	r24
+ 376:	9f 4f       	sbci	r25, 0xFF	; 255
+ 378:	01 c0       	rjmp	.+2      	; 0x37c <__utoa_common>
+
+0000037a <__utoa_ncheck>:
+ 37a:	bb 27       	eor	r27, r27
+
+0000037c <__utoa_common>:
+ 37c:	fb 01       	movw	r30, r22
+ 37e:	55 27       	eor	r21, r21
+ 380:	aa 27       	eor	r26, r26
+ 382:	88 0f       	add	r24, r24
+ 384:	99 1f       	adc	r25, r25
+ 386:	aa 1f       	adc	r26, r26
+ 388:	a4 17       	cp	r26, r20
+ 38a:	10 f0       	brcs	.+4      	; 0x390 <__utoa_common+0x14>
+ 38c:	a4 1b       	sub	r26, r20
+ 38e:	83 95       	inc	r24
+ 390:	50 51       	subi	r21, 0x10	; 16
+ 392:	b9 f7       	brne	.-18     	; 0x382 <__utoa_common+0x6>
+ 394:	a0 5d       	subi	r26, 0xD0	; 208
+ 396:	aa 33       	cpi	r26, 0x3A	; 58
+ 398:	08 f0       	brcs	.+2      	; 0x39c <__utoa_common+0x20>
+ 39a:	a9 5d       	subi	r26, 0xD9	; 217
+ 39c:	a1 93       	st	Z+, r26
+ 39e:	00 97       	sbiw	r24, 0x00	; 0
+ 3a0:	79 f7       	brne	.-34     	; 0x380 <__utoa_common+0x4>
+ 3a2:	b1 11       	cpse	r27, r1
+ 3a4:	b1 93       	st	Z+, r27
+ 3a6:	11 92       	st	Z+, r1
+ 3a8:	cb 01       	movw	r24, r22
+ 3aa:	00 c0       	rjmp	.+0      	; 0x3ac <strrev>
+
+000003ac <strrev>:
+ 3ac:	dc 01       	movw	r26, r24
+ 3ae:	fc 01       	movw	r30, r24
+ 3b0:	67 2f       	mov	r22, r23
+ 3b2:	71 91       	ld	r23, Z+
+ 3b4:	77 23       	and	r23, r23
+ 3b6:	e1 f7       	brne	.-8      	; 0x3b0 <strrev+0x4>
+ 3b8:	32 97       	sbiw	r30, 0x02	; 2
+ 3ba:	04 c0       	rjmp	.+8      	; 0x3c4 <strrev+0x18>
+ 3bc:	7c 91       	ld	r23, X
+ 3be:	6d 93       	st	X+, r22
+ 3c0:	70 83       	st	Z, r23
+ 3c2:	62 91       	ld	r22, -Z
+ 3c4:	ae 17       	cp	r26, r30
+ 3c6:	bf 07       	cpc	r27, r31
+ 3c8:	c8 f3       	brcs	.-14     	; 0x3bc <strrev+0x10>
+ 3ca:	08 95       	ret
+
+000003cc <_exit>:
+ 3cc:	f8 94       	cli
+
+000003ce <__stop_program>:
+ 3ce:	ff cf       	rjmp	.-2      	; 0x3ce <__stop_program>
